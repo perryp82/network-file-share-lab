@@ -1,7 +1,7 @@
 # Microsoft Azure Lab: Network File Shares and Permissions
 
 ## Overview
-In this lab, you will work with Network File Shares and Permissions on Microsoft Azure to demonstrate your understanding of file share configurations and permissions. **We will be using the DC-1 and Client-1 virtual machines (VMs) from the previous Active Directory lab.**
+In this lab, we will work with Network File Shares and Permissions on Microsoft Azure to demonstrate an understanding of file share configurations and permissions. **We will be using the DC-1 and Client-1 virtual machines (VMs) from the previous Active Directory lab.**
 
 ### Prerequisites
 1. Access to the DC-1 VM as a domain administrator account (`mydomain.com\jane_admin`).
