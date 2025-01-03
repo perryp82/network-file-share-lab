@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://i.imgur.com/L4QkhAs.png" alt="lab 7"/>
+</p>
+
 # Microsoft Azure Lab: Network File Shares and Permissions
 
 ## Overview
@@ -20,21 +24,37 @@ In this lab, we will work with Network File Shares and Permissions on Microsoft 
    - `no-access`
    - `accounting`
 
+<p>
+<img src="https://i.imgur.com/FVYalwj.png" height="80%" width="80%" alt="Lab 7"/>
+</p>
+
 3. Set the following permissions for each folder:
    - **Folder:** `read-access`  
      **Group:** `Domain Users`  
      **Permission:** `Read`  
      *(Share the folder with these settings.)*
 
+<p>
+<img src="https://i.imgur.com/dsukySe.png" height="80%" width="80%" alt="Lab 7"/>
+</p>
+
    - **Folder:** `write-access`  
      **Group:** `Domain Users`  
      **Permission:** `Read/Write`  
      *(Share the folder with these settings.)*
 
+<p>
+<img src="https://i.imgur.com/NZoGPBe.png" height="80%" width="80%" alt="Lab 7"/>
+</p>
+
    - **Folder:** `no-access`  
      **Group:** `Domain Admins`  
      **Permission:** `Read/Write`  
      *(Share the folder with these settings.)*
+
+<p>
+<img src="https://i.imgur.com/QnljHOP.png" height="80%" width="80%" alt="Lab 7"/>
+</p>
 
    - **Folder:** `accounting`  
      *(Do not configure permissions yet; skip this for now.)*
@@ -49,7 +69,10 @@ In this lab, we will work with Network File Shares and Permissions on Microsoft 
 3. Test access to the folders:
    - Which folders can you access? 
    - Which folders can you create files in?
-   - Does the access behavior make sense based on the permissions configured?
+  
+<p>
+<img src="https://i.imgur.com/kSVT94w.png" height="80%" width="80%" alt="Lab 7"/>
+</p>
 
 ---
 
@@ -57,18 +80,34 @@ In this lab, we will work with Network File Shares and Permissions on Microsoft 
 1. **Log into DC-1** as the domain admin account (`mydomain.com\jane_admin`).
 2. Open Active Directory and create a security group named `ACCOUNTANTS`.
 
+<p>
+<img src="https://i.imgur.com/kWtCZXi.png" height="80%" width="80%" alt="Lab 7"/>
+</p>
+
 3. Set permissions for the `accounting` folder:
    - **Folder:** `accounting`  
      **Group:** `ACCOUNTANTS`  
      **Permission:** `Read/Write`  
      *(Share the folder with these settings.)*
 
+<p>
+<img src="https://i.imgur.com/UB0vq4N.png" height="80%" width="80%" alt="Lab 7"/>
+</p>
+
 4. Test access as the normal user:
    - On Client-1, while logged in as `<someuser>`, try to access the `accounting` share via `\\dc-1`.  
      - **Expected Result:** Access to the folder should fail.
 
+<p>
+<img src="https://i.imgur.com/0Ky6lma.png" height="80%" width="80%" alt="Lab 7"/>
+</p>
+
 5. Assign `<someuser>` to the `ACCOUNTANTS` group:
    - On DC-1, add `<someuser>` as a member of the `ACCOUNTANTS` security group.
+
+<p>
+<img src="https://i.imgur.com/JD9aUY7.png" height="80%" width="80%" alt="Lab 7"/>
+</p>
 
 6. Re-test access as `<someuser>`:
    - **Log out of Client-1** and log back in as `<someuser>`.
